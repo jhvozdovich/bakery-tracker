@@ -105,7 +105,7 @@ namespace BakeryTracker.Tests
       Order newOrder2 = new Order(type2, quantity2);
       Order newOrder3 = new Order(type3, quantity3);
       Order result = Order.Find(2);
-      Assert.AreEqual(result, newOrder3);
+      Assert.AreEqual(result, newOrder2);
     }
   }
 }

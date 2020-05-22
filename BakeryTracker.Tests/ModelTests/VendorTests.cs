@@ -20,5 +20,15 @@ namespace BakeryTracker.Tests
       Vendor newVendor = new Vendor("Howl Jenkins Pendragon", "111 Howl's Moving Castle, Ingary");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+    
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      string name = "Haku";
+      string address = "Yubaba's Bathhouse";
+      Vendor newVendor = new Vendor(name, address);
+      string result = newVendor.Name;
+      Assert.AreEqual(name, "Bloop");
+    }
   }
 }

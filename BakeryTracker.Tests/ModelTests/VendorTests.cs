@@ -115,7 +115,7 @@ namespace BakeryTracker.Tests
       newVendor.AddOrder(newOrder1);
       newVendor.AddOrder(newOrder2);
       newVendor.AddOrder(newOrder3);
-      List<Order> newOrders = new List<Order> { newOrder1, newOrder2};
+      List<Order> newOrders = new List<Order> { newOrder1, newOrder2, newOrder3};
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(result, newOrders);
     }

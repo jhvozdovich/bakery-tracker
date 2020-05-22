@@ -51,7 +51,7 @@ namespace BakeryTracker.Tests
       string description = "A nice vacation spot, but don't sign any contracts!";
       Vendor newVendor = new Vendor(name, address, description);
       string result = newVendor.Description;
-      Assert.AreEqual(address, result);
+      Assert.AreEqual(description, result);
     }
 
     [TestMethod]

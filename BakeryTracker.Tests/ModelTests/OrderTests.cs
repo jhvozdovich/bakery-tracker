@@ -73,6 +73,19 @@ namespace BakeryTracker.Tests
     }
 
     [TestMethod]
+    public void GetDueDate_ReturnsDueDate_String()
+    {
+      string type = "Baguette";
+      int quantity = 2;
+      string description = "delicious crust";
+      double price = 9;
+      string dueDate = "November 8";
+      Order newOrder = new Order(type, quantity, description, price, dueDate);
+      string result = newOrder.DueDate;
+      Assert.AreEqual(price, result);
+    }
+
+    [TestMethod]
      public void GetId_ReturnsId_Int()
     {
       string type1 = "Baguette";

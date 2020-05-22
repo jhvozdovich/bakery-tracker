@@ -44,6 +44,17 @@ namespace BakeryTracker.Tests
     }
 
     [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "Haku";
+      string address = "Yubaba's Bathhouse";
+      string description = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor = new Vendor(name, address, description);
+      string result = newVendor.Description;
+      Assert.AreEqual(address, result);
+    }
+
+    [TestMethod]
      public void GetId_ReturnsId_Int()
     {
       string name1 = "Howl Jenkins Pendragon";

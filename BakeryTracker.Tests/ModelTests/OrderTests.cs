@@ -69,10 +69,10 @@ namespace BakeryTracker.Tests
       Order newOrder2 = new Order(type2, quantity2);
       Order newOrder3 = new Order(type3, quantity3);
       int beforeClear = Order.GetAll().Count;
-      Assert.AreEqual(13, beforeClear);
+      Assert.AreEqual(3, beforeClear);
       Order.ClearAll();
       int result = Order.GetAll().Count;
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(0, result);
     }
   }
 }

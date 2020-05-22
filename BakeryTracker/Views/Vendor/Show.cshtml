@@ -1,0 +1,26 @@
+@using BakeryTracker.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<h1>@Model["vendor"].Name</h1>
+<h3>Address: @Model["vendor"].Address</h3>
+
+<h3>Here are all all of @Model["vendor"].Name's Orders:</h3>
+
+@if (@Model["orders"].Count == 0)
+{
+  <h4>This customer has no outstanding orders!</h4>
+}
+
+<ul>
+@* @foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Type</a></li>
+} *@
+</ul>
+
+<button class="btn"><a href="/">Home</a></button>
+<button class="btn"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add A New Order</a></button>
+<button class="btn"><a href="/vendors">Vendor List</a></button>

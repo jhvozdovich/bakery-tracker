@@ -67,5 +67,21 @@ namespace BakeryTracker.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void ClearAll_ClearsAllVendors_Int()
+    {
+      string name1 = "Howl Jenkins Pendragon";
+      string address1 = "111 Howl's Moving Castle, Ingary";
+      string name2 = "Haku";
+      string address2 = "Yubaba's Bathhouse";
+      Vendor newVendor1 = new Vendor(name1, address1);
+      Vendor newVendor2 = new Vendor(name2, address2);
+      int beforeClear = Vendor.GetAll().Count;
+      Assert.AreEqual(12, beforeClear);
+      Vendor.ClearAll();
+      int result = Vendor.GetAll().Count;
+      Assert.AreEqual(10, result);
+    }
   }
 }

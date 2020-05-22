@@ -18,7 +18,7 @@ namespace BakeryTracker.Tests
     public void VendorConstructor_CreateVendorInstance_Object()
     {
       Vendor newVendor = new Vendor("Howl Jenkins Pendragon", "111 Howl's Moving Castle, Ingary");
-      Assert.AreEqual(typeof(Vendor), 0.GetType());
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }

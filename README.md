@@ -5,6 +5,8 @@
 #### Author: **_Jessica Hvozdovich_**
 #### May 22, 2020
 
+![Site Preview](https://pbs.twimg.com/media/CeWxkxIWsAECgAh.jpg)
+
 ### Description
 
 _The purpose of this project is to create a C# web application that tracks user inputs of vendors and their associated orders for a baking business. It demonstrates the use of Behavior Driven Development and Test Driven Development using C# with the MSTest unit testing framework. The use of the `ASP.NET` Core framework and MVC architecture with RESTful routing principles is also demonstrated._
@@ -58,10 +60,11 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **User can add a new Order for each Vendor** | User Input:"Pastry Type: Baguettes Quantity: 2, Description: Keep them fresh, Price: 10, Due date: May 22 at 5pm" | Output: “Maki Orders: Baguettes” |
 | **User can view Order details when clicked** | User Input:"Click: Baguettes" | Output: “Order Details: Pastry Type: Baguettes Quantity: 2, Description: Keep them fresh, Price: 10, Due date: May 22 at 5pm” |
 | **User can delete all Vendors** | User Input:"Click: Delete All" | Output: “You have no vendors listed!” |
+| **User can delete single Vendors** | User Input:"Click: Delete Vendor" | Output: “You have removed this vendor!” |
 | **User can delete all Orders** | User Input:"Click: Delete All" | Output: “This customer has no outstanding orders." |
 
 ### Stretch Goals
-* User can delete individual or all Vendors and Orders
+* User can delete individual Orders
 * User can update Vendor or Order details
 * Search functionality
 

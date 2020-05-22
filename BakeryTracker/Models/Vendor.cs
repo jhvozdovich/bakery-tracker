@@ -26,6 +26,11 @@ namespace BakeryTracker.Models
       _instances.Clear();
     }
 
+    public static void DeleteVendor(int vendorId)
+    {
+      
+    }
+
     public static List<Vendor> GetAll()
     {
       return _instances;

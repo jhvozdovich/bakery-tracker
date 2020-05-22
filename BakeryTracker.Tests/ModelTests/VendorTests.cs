@@ -150,5 +150,21 @@ namespace BakeryTracker.Tests
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(result, newOrders);
     }
+
+    [TestMethod]
+    public void DeleteOne_RemoveSpecificVendor_Int()
+    {
+      string name1 = "Howl Jenkins Pendragon";
+      string address1 = "111 Howl's Moving Castle, Ingary";
+      string description1 = "A castle that moves, good luck with the delivery!";
+      string name2 = "Haku";
+      string address2 = "Yubaba's Bathhouse";
+      string description2 = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor1 = new Vendor(name1, address1, description1);
+      Vendor newVendor2 = new Vendor(name2, address2, description2);
+      Vendor.DeleteVendor(1);
+      int result = Vendor.GetAll().Count;
+      Assert.AreEqual(result, 1);
+    }
   }
 }

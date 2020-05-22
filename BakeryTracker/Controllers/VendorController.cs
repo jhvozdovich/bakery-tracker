@@ -12,5 +12,18 @@ namespace BakeryTracker.Controllers
       List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/vendors")]
+    public ActionResult Create(string name, string address)
+    {
+      Vendor newVendor = new Vendor(name, address);
+      return RedirectToAction("Index");
+    }
   }
 }

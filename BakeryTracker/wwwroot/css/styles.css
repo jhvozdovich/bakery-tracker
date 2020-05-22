@@ -1,6 +1,23 @@
 body {
-  background-color: cornflowerblue;
+  background-image: url("../img/bakerybg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 15%;
 }
+
+.box {
+  background: rgba(241, 232, 208, 0.85);
+  padding: 5%;
+  border-radius: 25px;
+  border: 5px solid rgb(91, 179, 216);
+  text-align: center;
+}
+
+h1{
+  font-weight: bolder;
+}
+
+
 
 .signature{
   font-family: cursive;

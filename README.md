@@ -61,6 +61,12 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * User can update Vendor or Order details
 * Search functionality
 
+#### Resources
+
+Theme and backgrounds - Kiki's Delivery Service, Studio Ghibli
+<br>
+[Bakery](https://pbs.twimg.com/media/CeWxkxIWsAECgAh.jpg)
+
 #### License
 
 This software is licensed under the MIT license.

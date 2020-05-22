@@ -96,5 +96,28 @@ namespace BakeryTracker.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(result, newVendor2);
     }
+
+    [TestMethod]
+    public void AddOrder_UpdateOrderListWithNewOrder_ObjectList()
+    {
+      string name = "Howl Jenkins Pendragon";
+      string address = "111 Howl's Moving Castle, Ingary";
+      Vendor newVendor = new Vendor(name, address);
+      string type1 = "Baguette";
+      int quantity1 = 2;
+      string type2 = "Croissant";
+      int quantity2 = 10;
+      string type3 = "Brioche";
+      int quantity3 = 4;
+      Order newOrder1 = new Order(type1, quantity1);
+      Order newOrder2 = new Order(type2, quantity2);
+      Order newOrder3 = new Order(type3, quantity3);
+      newVendor.AddOrder(newOrder1);
+      newVendor.AddOrder(newOrder2);
+      newVendor.AddOrder(newOrder3);
+      List<Order> newOrders = new List<Order> { newOrder1, newOrder2};
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(result, newOrders);
+    }
   }
 }

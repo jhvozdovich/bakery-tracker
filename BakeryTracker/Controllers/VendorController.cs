@@ -49,5 +49,12 @@ namespace BakeryTracker.Controllers
       model.Add("orders", vendorOrders);
       return View("Show", model);
     }
+
+    [HttpPost("/vendors/deleteAll")]
+    public ActionResult DeleteAll()
+    {
+      Vendor.ClearAll();
+      return View();
+    }
   }
 }

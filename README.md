@@ -1,4 +1,4 @@
-# **Vendor and Order Tracker**
+# **Bakery Vendor and Order Tracker**
 
 ### _Basic Web Applications - Week 10 Project at Epicodus_
 
@@ -55,7 +55,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **User can navigate to a new Orders page for each Vendor** | User Input:"Click: Maki Click: Add Order" | Output: “Order: \___ Quantity: \___” |
 | **User can add a new Order for each Vendor** | User Input:"Order: Baguettes Quantity: 2" | Output: “Biscuits 10, Croissants 15, Baguettes 2” |
 
-### Stretch goals
+### Stretch Goals
 * User can see Order details on a separate page (date made, date due, location, cost)
 * User can delete individual or all Vendors and Orders
 * User can update Vendor or Order details

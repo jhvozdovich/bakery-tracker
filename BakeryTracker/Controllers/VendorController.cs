@@ -57,12 +57,11 @@ namespace BakeryTracker.Controllers
       return View();
     }
 
-    // [HttpPost("/vendors/delete/{vendorId}")]
-    // public ActionResult DeleteOne(int vendorId)
-    // {
-    //   Vendor.DeleteVendor(Id);
-    //   return View();
-    // }
-
+    [HttpPost("/vendors/delete/{vendorId}")]
+    public ActionResult Destroy(int vendorId)
+    {
+      Vendor.DeleteVendor(vendorId);
+      return View();
+    }
   }
 }

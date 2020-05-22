@@ -24,3 +24,10 @@
 <hr>
 <button class="btn"><a href="/">Home</a></button>
 <button class="btn"><a href="/vendors">Vendor List</a></button>
+<br>
+<br>
+
+<form action='delete/@Model["vendor"].Id' method ="post">  
+  <button class="btn" type="submit">Delete Vendor</a></button>
+</form>
+@* "vendors" part of delete path is automatically generated, it occurs twice if specified - find source *@

@@ -56,7 +56,7 @@ namespace BakeryTracker.Tests
       string dueDate = "November 8";
       Order newOrder = new Order(type, quantity, description, price, dueDate);
       string result = newOrder.Description;
-      Assert.AreEqual(type, result);
+      Assert.AreEqual(description, result);
     }
 
     [TestMethod]

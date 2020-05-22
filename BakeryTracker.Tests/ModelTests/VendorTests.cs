@@ -152,7 +152,7 @@ namespace BakeryTracker.Tests
     }
 
     [TestMethod]
-    public void DeleteOne_RemoveSpecificVendor_Int()
+    public void DeleteOne_RemoveSpecificVendor_String()
     {
       string name1 = "Howl Jenkins Pendragon";
       string address1 = "111 Howl's Moving Castle, Ingary";
@@ -163,8 +163,9 @@ namespace BakeryTracker.Tests
       Vendor newVendor1 = new Vendor(name1, address1, description1);
       Vendor newVendor2 = new Vendor(name2, address2, description2);
       Vendor.DeleteVendor(1);
-      int result = Vendor.GetAll().Count;
-      Assert.AreEqual(result, 1);
+      List<Vendor> emptiedList = Vendor.GetAll();
+      string result = emptiedList[0].Name;
+      Assert.AreEqual(result, "empty");
     }
   }
 }

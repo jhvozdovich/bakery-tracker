@@ -4,8 +4,11 @@
 
 <h1>Order Details: </h1>
 
-<p>Order Type: @Model["order"].Type</p>
+<p>Product Type: @Model["order"].Type</p>
 <p>Quantity: @Model["order"].Quantity</p>
+<p>Description: @Model["order"].Description</p>
+<p>Price: @Model["order"].Price</p>
+<p>Due Date: @Model["order"].DueDate</p>
 
 
 <button class="btn"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add Another Order</a></button>

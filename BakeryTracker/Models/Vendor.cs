@@ -28,7 +28,7 @@ namespace BakeryTracker.Models
 
     public static void DeleteVendor(int vendorId)
     {
-      
+      _instances.RemoveAt(vendorId -1);
     }
 
     public static List<Vendor> GetAll()

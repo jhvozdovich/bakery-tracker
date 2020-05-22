@@ -7,7 +7,7 @@
 
 ### Description
 
-_The purpose of this project is to create a C# web application that accepts string inputs of a word and a sentence from the user. It demonstrates the use of Behavior Driven Development and Test Driven Development using C# with the MSTest unit testing framework._
+_The purpose of this project is to create a C# web application that tracks user inputs of vendors and their associated orders for a baking business. It demonstrates the use of Behavior Driven Development and Test Driven Development using C# with the MSTest unit testing framework. The use of the `ASP.NET` Core framework and MVC architecture with RESTful routing principles is also demonstrated._
 
 ### Instructions for use:
 
@@ -39,14 +39,27 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 
 * C#
 * MSTest
-* ASP .Net Core
+* `ASP.NET` Core
 * MVC
+* Razor
 * Git and GitHub
 
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **Spec** | User Input:"” | Output: “” |
+| **User enters home page** | User Input:"URL: localhost:5000/" | Output: “Welcome Kiki” |
+| **User can navigate to a Vendors Page** | User Input:"Click: View Vendors" | Output: “Here are a list of vendors: ” |
+| **User can navigate to an Add Vendors Page** | User Input:"Click: Add Vendors" | Output: “Create a new vendor.” |
+| **User can fill out the Add Vendors Form** | User Input:"Enter New Vendor Name: Maki" | Output: “New vendor created.” |
+| **User can click on Vendors to view their Orders** | User Input:"Click: Maki" | Output: “Orders: Biscuits 10, Croissants 15” |
+| **User can navigate to a new Orders page for each Vendor** | User Input:"Click: Maki Click: Add Order" | Output: “Order: \___ Quantity: \___” |
+| **User can add a new Order for each Vendor** | User Input:"Order: Baguettes Quantity: 2" | Output: “Biscuits 10, Croissants 15, Baguettes 2” |
+
+### Stretch goals
+* User can see Order details on a separate page (date made, date due, location, cost)
+* User can delete individual or all Vendors and Orders
+* User can update Vendor or Order details
+* Search functionality
 
 #### License
 

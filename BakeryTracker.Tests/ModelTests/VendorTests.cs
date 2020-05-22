@@ -17,7 +17,7 @@ namespace BakeryTracker.Tests
     [TestMethod]
     public void VendorConstructor_CreateVendorInstance_Object()
     {
-      Vendor newVendor = new Vendor("Howl Jenkins Pendragon", "111 Howl's Moving Castle, Ingary");
+      Vendor newVendor = new Vendor("Howl Jenkins Pendragon", "111 Howl's Moving Castle, Ingary", "A castle that moves, good luck with the delivery!");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     
@@ -26,7 +26,8 @@ namespace BakeryTracker.Tests
     {
       string name = "Haku";
       string address = "Yubaba's Bathhouse";
-      Vendor newVendor = new Vendor(name, address);
+      string description = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor = new Vendor(name, address, description);
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
@@ -36,7 +37,8 @@ namespace BakeryTracker.Tests
     {
       string name = "Haku";
       string address = "Yubaba's Bathhouse";
-      Vendor newVendor = new Vendor(name, address);
+      string description = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor = new Vendor(name, address, description);
       string result = newVendor.Address;
       Assert.AreEqual(address, result);
     }
@@ -46,10 +48,12 @@ namespace BakeryTracker.Tests
     {
       string name1 = "Howl Jenkins Pendragon";
       string address1 = "111 Howl's Moving Castle, Ingary";
+      string description1 = "A castle that moves, good luck with the delivery!";
       string name2 = "Haku";
       string address2 = "Yubaba's Bathhouse";
-      Vendor newVendor1 = new Vendor(name1, address1);
-      Vendor newVendor2 = new Vendor(name2, address2);
+      string description2 = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor1 = new Vendor(name1, address1, description1);
+      Vendor newVendor2 = new Vendor(name2, address2, description2);
       int result = newVendor2.Id;
       Assert.AreEqual(2, result);
     }
@@ -59,10 +63,12 @@ namespace BakeryTracker.Tests
     {
       string name1 = "Howl Jenkins Pendragon";
       string address1 = "111 Howl's Moving Castle, Ingary";
+      string description1 = "A castle that moves, good luck with the delivery!";
       string name2 = "Haku";
       string address2 = "Yubaba's Bathhouse";
-      Vendor newVendor1 = new Vendor(name1, address1);
-      Vendor newVendor2 = new Vendor(name2, address2);
+      string description2 = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor1 = new Vendor(name1, address1, description1);
+      Vendor newVendor2 = new Vendor(name2, address2, description2);
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
@@ -73,10 +79,12 @@ namespace BakeryTracker.Tests
     {
       string name1 = "Howl Jenkins Pendragon";
       string address1 = "111 Howl's Moving Castle, Ingary";
+      string description1 = "A castle that moves, good luck with the delivery!";
       string name2 = "Haku";
       string address2 = "Yubaba's Bathhouse";
-      Vendor newVendor1 = new Vendor(name1, address1);
-      Vendor newVendor2 = new Vendor(name2, address2);
+      string description2 = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor1 = new Vendor(name1, address1, description1);
+      Vendor newVendor2 = new Vendor(name2, address2, description2);
       int beforeClear = Vendor.GetAll().Count;
       Assert.AreEqual(2, beforeClear);
       Vendor.ClearAll();
@@ -89,10 +97,12 @@ namespace BakeryTracker.Tests
     {
       string name1 = "Howl Jenkins Pendragon";
       string address1 = "111 Howl's Moving Castle, Ingary";
+      string description1 = "A castle that moves, good luck with the delivery!";
       string name2 = "Haku";
       string address2 = "Yubaba's Bathhouse";
-      Vendor newVendor1 = new Vendor(name1, address1);
-      Vendor newVendor2 = new Vendor(name2, address2);
+      string description2 = "A nice vacation spot, but don't sign any contracts!";
+      Vendor newVendor1 = new Vendor(name1, address1, description1);
+      Vendor newVendor2 = new Vendor(name2, address2, description2);
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(result, newVendor2);
     }
@@ -102,7 +112,8 @@ namespace BakeryTracker.Tests
     {
       string name = "Howl Jenkins Pendragon";
       string address = "111 Howl's Moving Castle, Ingary";
-      Vendor newVendor = new Vendor(name, address);
+      string description = "A castle that moves, good luck with the delivery!";
+      Vendor newVendor = new Vendor(name, address, description);
       string type1 = "Baguette";
       int quantity1 = 2;
       string type2 = "Croissant";

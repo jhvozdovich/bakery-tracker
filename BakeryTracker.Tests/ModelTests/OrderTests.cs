@@ -74,5 +74,22 @@ namespace BakeryTracker.Tests
       int result = Order.GetAll().Count;
       Assert.AreEqual(0, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllOrders_OrderList()
+    {
+      string type1 = "Baguette";
+      int quantity1 = 2;
+      string type2 = "Croissant";
+      int quantity2 = 10;
+      string type3 = "Brioche";
+      int quantity3 = 4;
+      Order newOrder1 = new Order(type1, quantity1);
+      Order newOrder2 = new Order(type2, quantity2);
+      Order newOrder3 = new Order(type3, quantity3);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

@@ -47,16 +47,20 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **User enters home page** | User Input:"URL: localhost:5000/" | Output: “Welcome Kiki” |
-| **User can navigate to a Vendors Page** | User Input:"Click: View Vendors" | Output: “Here are a list of vendors: ” |
+| **User enters home page** | User Input:"URL: localhost:5000/" | Output: “Welcome Osono!” |
+| **User can navigate to a Vendors Page** | User Input:"Click: View Vendors" | Output: “Tombo, Ursula, Maki, Madame” |
+| **If no vendors have been added a message appears** | User Input:"Click: View Vendors" | Output: “You have no vendors listed! Add a few.” |
 | **User can navigate to an Add Vendors Page** | User Input:"Click: Add Vendors" | Output: “Create a new vendor.” |
-| **User can fill out the Add Vendors Form** | User Input:"Enter New Vendor Name: Maki" | Output: “New vendor created.” |
-| **User can click on Vendors to view their Orders** | User Input:"Click: Maki" | Output: “Orders: Biscuits 10, Croissants 15” |
-| **User can navigate to a new Orders page for each Vendor** | User Input:"Click: Maki Click: Add Order" | Output: “Order: \___ Quantity: \___” |
-| **User can add a new Order for each Vendor** | User Input:"Order: Baguettes Quantity: 2" | Output: “Biscuits 10, Croissants 15, Baguettes 2” |
+| **User can fill out the Add Vendors Form** | User Input:"Enter New Vendor Name: Maki, Address: The house with the blue roof, Description: A fashion designer that orders for her boutique" | Output: “Vendors: Maki” |
+| **User can click on Vendors to view their Orders** | User Input:"Click: Maki" | Output: “Orders: Biscuits , Croissants” |
+| **If no orders have been added a message appears** | User Input:"Click: View Orders" | Output: “This customer has no outstanding orders.” |
+| **User can navigate to a new Orders page for each Vendor** | User Input:"Click: Maki Click: Add Order" | Output: “Order Form" |
+| **User can add a new Order for each Vendor** | User Input:"Pastry Type: Baguettes Quantity: 2, Description: Keep them fresh, Price: 10, Due date: May 22 at 5pm" | Output: “Maki Orders: Baguettes” |
+| **User can view Order details when clicked** | User Input:"Click: Baguettes" | Output: “Order Details: Pastry Type: Baguettes Quantity: 2, Description: Keep them fresh, Price: 10, Due date: May 22 at 5pm” |
+| **User can delete all Vendors** | User Input:"Click: Delete All" | Output: “You have no vendors listed!” |
+| **User can delete all Orders** | User Input:"Click: Delete All" | Output: “This customer has no outstanding orders." |
 
 ### Stretch Goals
-* User can see Order details on a separate page (date made, date due, location, cost)
 * User can delete individual or all Vendors and Orders
 * User can update Vendor or Order details
 * Search functionality

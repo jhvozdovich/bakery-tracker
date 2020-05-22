@@ -91,5 +91,21 @@ namespace BakeryTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_FindSpecifiedOrder_Object()
+    {
+      string type1 = "Baguette";
+      int quantity1 = 2;
+      string type2 = "Croissant";
+      int quantity2 = 10;
+      string type3 = "Brioche";
+      int quantity3 = 4;
+      Order newOrder1 = new Order(type1, quantity1);
+      Order newOrder2 = new Order(type2, quantity2);
+      Order newOrder3 = new Order(type3, quantity3);
+      Order result = Order.Find(2);
+      Assert.AreEqual(result, newOrder3);
+    }
   }
 }

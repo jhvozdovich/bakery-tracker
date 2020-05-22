@@ -87,7 +87,7 @@ namespace BakeryTracker.Tests
       Order newOrder1 = new Order(type1, quantity1);
       Order newOrder2 = new Order(type2, quantity2);
       Order newOrder3 = new Order(type3, quantity3);
-      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> newList = new List<Order> { newOrder1, newOrder2, newOrder3 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }

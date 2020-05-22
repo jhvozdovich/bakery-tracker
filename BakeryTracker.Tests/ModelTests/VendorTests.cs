@@ -78,10 +78,10 @@ namespace BakeryTracker.Tests
       Vendor newVendor1 = new Vendor(name1, address1);
       Vendor newVendor2 = new Vendor(name2, address2);
       int beforeClear = Vendor.GetAll().Count;
-      Assert.AreEqual(12, beforeClear);
+      Assert.AreEqual(2, beforeClear);
       Vendor.ClearAll();
       int result = Vendor.GetAll().Count;
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(0, result);
     }
   }
 }

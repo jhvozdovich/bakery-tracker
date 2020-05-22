@@ -53,7 +53,7 @@ namespace BakeryTracker.Tests
       Order newOrder2 = new Order(type2, quantity2);
       Order newOrder3 = new Order(type3, quantity3);
       int result = newOrder3.Id;
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(3, result);
     }
   }
 }

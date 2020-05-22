@@ -29,5 +29,15 @@ namespace BakeryTracker.Tests
       string result = newOrder.Type;
       Assert.AreEqual(type, result);
     }
+
+    [TestMethod]
+    public void GetQuantity_ReturnsQuantity_Int()
+    {
+      string type = "Baguette";
+      int quantity = 2;
+      Order newOrder = new Order(type, quantity);
+      int result = newOrder.Quantity;
+      Assert.AreEqual(0, result);
+    }
   }
 }

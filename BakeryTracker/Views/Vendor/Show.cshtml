@@ -27,7 +27,9 @@
 <br>
 <br>
 
-<form action='delete/@Model["vendor"].Id' method ="post">  
+<form action='/vendors/delete/@Model["vendor"].Id' method ="post">  
   <button class="btn" type="submit">Delete Vendor</a></button>
 </form>
-@* "vendors" part of delete path is automatically generated, it occurs twice if specified - find source *@
+<form action='/vendors/@Model["vendor"].Id/orders/deleteAll' method = post>
+  <button class="btn" type="submit">Delete All Orders</a></button>
+</form>

@@ -50,7 +50,7 @@ namespace BakeryTracker.Tests
       string address2 = "Yubaba's Bathhouse";
       Vendor newVendor1 = new Vendor(name1, address1);
       Vendor newVendor2 = new Vendor(name2, address2);
-      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2, newVendor1 };
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }

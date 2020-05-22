@@ -94,7 +94,7 @@ namespace BakeryTracker.Tests
       Vendor newVendor1 = new Vendor(name1, address1);
       Vendor newVendor2 = new Vendor(name2, address2);
       Vendor result = Vendor.Find(2);
-      Assert.AreEqual(result, newVendor1);
+      Assert.AreEqual(result, newVendor2);
     }
   }
 }

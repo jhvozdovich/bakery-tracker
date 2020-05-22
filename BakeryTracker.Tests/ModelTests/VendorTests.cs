@@ -83,5 +83,18 @@ namespace BakeryTracker.Tests
       int result = Vendor.GetAll().Count;
       Assert.AreEqual(0, result);
     }
+
+    [TestMethod]
+    public void Find_FindSpecifiedVendor_Object()
+    {
+      string name1 = "Howl Jenkins Pendragon";
+      string address1 = "111 Howl's Moving Castle, Ingary";
+      string name2 = "Haku";
+      string address2 = "Yubaba's Bathhouse";
+      Vendor newVendor1 = new Vendor(name1, address1);
+      Vendor newVendor2 = new Vendor(name2, address2);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(result, newVendor1);
+    }
   }
 }

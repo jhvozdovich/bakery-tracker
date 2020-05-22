@@ -28,5 +28,10 @@ namespace BakeryTracker.Models
     {
       return _instances;
     }
+
+    public static Vendor Find(int vendorId)
+    {
+      return _instances[vendorId - 1];
+    }
   }
 }

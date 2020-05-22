@@ -7,11 +7,13 @@
 <p>Product Type: @Model["order"].Type</p>
 <p>Quantity: @Model["order"].Quantity</p>
 <p>Description: @Model["order"].Description</p>
-<p>Price: @Model["order"].Price</p>
+<p>Price: $@Model["order"].Price</p>
 <p>Due Date: @Model["order"].DueDate</p>
 
 
-<button class="btn"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add Another Order</a></button>
+<button class="btn"><a href='/vendors/@Model["vendor"].Id'>@Model["vendor"].Name's Order List</a></button>
 <hr>
 <button class="btn"><a href="/">Home</a></button>
 <button class="btn"><a href="/vendors">Vendor List</a></button>
+<br>
+<br>

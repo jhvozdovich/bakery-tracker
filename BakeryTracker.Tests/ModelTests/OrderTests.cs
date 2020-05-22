@@ -19,5 +19,15 @@ namespace BakeryTracker.Tests
       Order newOrder = new Order("Baguette", 2);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetType_ReturnsType_String()
+    {
+      string type = "Baguette";
+      int quantity = 2;
+      Order newOrder = new Order(type, quantity);
+      string result = newOrder.Type;
+      Assert.AreEqual(0, result);
+    }
   }
 }

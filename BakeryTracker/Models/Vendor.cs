@@ -8,7 +8,7 @@ namespace BakeryTracker.Models
     public string Address { get; set; }
     public int Id { get; }
     private static List<Vendor> _instances = new List<Vendor> {};
-    // public List<Order> Orders { get; set; }
+    public List<Order> Orders { get; set; }
 
     public Vendor(string name, string address)
     {
@@ -16,7 +16,7 @@ namespace BakeryTracker.Models
       Address = address;
       _instances.Add(this);
       Id = _instances.Count;
-      // Orders = new List<Order>{};
+      Orders = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -34,9 +34,9 @@ namespace BakeryTracker.Models
       return _instances[vendorId - 1];
     }
 
-    // public void AddOrder(Order order)
-    // {
-    //   Orders.Add(order);
-    // }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }

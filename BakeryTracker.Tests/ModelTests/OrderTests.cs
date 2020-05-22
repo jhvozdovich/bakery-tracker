@@ -37,7 +37,7 @@ namespace BakeryTracker.Tests
       int quantity = 2;
       Order newOrder = new Order(type, quantity);
       int result = newOrder.Quantity;
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(quantity, result);
     }
   }
 }

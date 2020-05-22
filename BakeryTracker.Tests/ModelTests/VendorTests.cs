@@ -38,7 +38,7 @@ namespace BakeryTracker.Tests
       string address = "Yubaba's Bathhouse";
       Vendor newVendor = new Vendor(name, address);
       string result = newVendor.Address;
-      Assert.AreEqual(address, 0);
+      Assert.AreEqual(address, result);
     }
   }
 }

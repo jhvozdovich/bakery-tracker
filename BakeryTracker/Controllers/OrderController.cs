@@ -12,5 +12,16 @@ namespace BakeryTracker.Controllers
       Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     }
+
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>{};
+      Vendor vendor = Vendor.Find(vendorId);
+      Order order = Order.Find(orderId);
+      model.Add("vendor", vendor);
+      model.Add("order", order);
+      return View(model);
+    }
   }
 }

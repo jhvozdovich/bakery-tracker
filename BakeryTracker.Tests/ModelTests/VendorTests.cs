@@ -30,5 +30,15 @@ namespace BakeryTracker.Tests
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void GetAddress_ReturnsAddress_String()
+    {
+      string name = "Haku";
+      string address = "Yubaba's Bathhouse";
+      Vendor newVendor = new Vendor(name, address);
+      string result = newVendor.Address;
+      Assert.AreEqual(address, 0);
+    }
   }
 }

@@ -55,5 +55,24 @@ namespace BakeryTracker.Tests
       int result = newOrder3.Id;
       Assert.AreEqual(3, result);
     }
+
+    [TestMethod]
+    public void ClearAll_ClearsAllOrders_Int()
+    {
+      string type1 = "Baguette";
+      int quantity1 = 2;
+      string type2 = "Croissant";
+      int quantity2 = 10;
+      string type3 = "Brioche";
+      int quantity3 = 4;
+      Order newOrder1 = new Order(type1, quantity1);
+      Order newOrder2 = new Order(type2, quantity2);
+      Order newOrder3 = new Order(type3, quantity3);
+      int beforeClear = Order.GetAll().Count;
+      Assert.AreEqual(13, beforeClear);
+      Order.ClearAll();
+      int result = Order.GetAll().Count;
+      Assert.AreEqual(10, result);
+    }
   }
 }

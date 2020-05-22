@@ -51,7 +51,7 @@ namespace BakeryTracker.Tests
       Vendor newVendor1 = new Vendor(name1, address1);
       Vendor newVendor2 = new Vendor(name2, address2);
       int result = newVendor2.Id;
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(2, result);
     }
 
     [TestMethod]

@@ -32,11 +32,5 @@ namespace BakeryTracker.Controllers
       return View();
     }
 
-    [HttpPost("/vendors/delete/{vendorId}")]
-    public ActionResult Destroy(int vendorId, int orderId)
-    {
-      Vendor.DeleteVendor(vendorId);
-      return View();
-    }
   }
 }
